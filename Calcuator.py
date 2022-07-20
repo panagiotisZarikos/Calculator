@@ -8,10 +8,6 @@ class Math:
   def divide(x,y):
     return x / y
     pass
-    
-
-   
-
 
 print("1.Add")
 print("2.Subtract")
@@ -39,7 +35,11 @@ elif num_choice == "2":
 elif num_choice == "3":
   print(num1,"*",num2,"=",Math.multiply(num1,num2))
 elif num_choice == "4":
-  print(num1,"/",num2,"=",Math.divide(num1,num2))
+  try:
+   print(num1,"/",num2,"=",Math.divide(num1,num2))
+  except ZeroDivisionError:
+    print("You cannot divide by 0")
+  
   
 
   
